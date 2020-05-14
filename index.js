@@ -108,7 +108,7 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 var name = 'AJ'
 function variableInterestRate(P , I , N){
     for(let i = 0.02; i <=0.07 ; i+=0.005){
-   var monthlyRate = ((P * (I* Math.pow((1 + I) , N))) / (Math.pow(( 1 + I ) , N) - 1));
+   var monthlyRate = ((P * (I* Math.pow((i + I) , N))) / (Math.pow(( i + I ) , N) - i));
     console.log((name) + ", with an interest rate of " + (i) + ", your monthly rate is " + (monthlyRate));};
 }
 variableInterestRate(200000, 0.04, 30);
